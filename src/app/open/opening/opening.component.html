@@ -1,0 +1,17 @@
+<div class="container px-4 login-bg" id="open-page">
+  <div class="row gx-4 center">
+    <div class="col-md-4 align-items-center login-block">
+      <div class="row">
+        <div class="p-4 border bg-light">
+          <h4>Welcome {{employee?.name}}!!!</h4>
+        </div>
+      </div>
+      <div class="col">
+        Opening Balance
+        <input matInput placeholder="Opening Balance" type="number" [formControl]="opening_amount">
+        <span *ngIf="error" class="error">{{ error }}</span>
+        <button mat-raised-button color="primary" (click)="proceed()">Proceed arrow_right_alt
+        </button>
+      </div>
+    </div>
+  </div>
